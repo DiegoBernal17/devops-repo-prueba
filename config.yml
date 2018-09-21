@@ -1,0 +1,11 @@
+machine:
+        service:
+                - docker:
+
+dependencies:
+        override:
+                - docker build -t platzi
+
+test:
+        override:
+                - docker run platzi yarn test
